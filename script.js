@@ -1,45 +1,31 @@
-document.write("Hello World")
+function calculator(){
+    let input1 = document.getElementById("input1").value
+    let input2 = document.getElementById("input2").value
+    let operator = document.getElementById("operator").value
 
-//For subtraction//
+    switch (operator) {
+        case "add":
+            result = Number(input1) + Number(input2);
+            break;
+    }
+    switch (operator) {
+        case "subtract":
+            result = Number(input1) - Number(input2);
+            break;
+    }
+    switch (operator) {
+        case "divide":
+            result = Number(input1) / Number(input2);
+            break;
+    }
+    switch (operator) {
+        case "multiply":
+            result = Number(input1) * Number(input2);
+            break;
+    }
 
-var girls = 5
-var boys = 10
-let students = boys - girls
-document.write("<br>")
-document.write(girls)
-function subtraction(girls, boys){
-    return girls - boys;
-}
+    let resultTag = document.getElementById("result");
+    resultTag.innerHTML = `Result: ${result}`;
 
-// For Addition //
 
-var car = 32
-var keke = 58
-motor = keke + car
-document.write("<br>")
-document.write(motor)
-function add(car, keke){
-    return car + keke;
-}
-
-//For Multiplication //
-
-let male = 10
-let female = 6
-let gender = male * female
-document.write("<br>")
-document.write(gender)
-function Multiplication(male, female){
-    return  male * female;
-}
-
-//For Division //
-
-const brothers = 20
-const sisters = 5
-const family = brothers / sisters
-document.write("<br>")
-document.write(family)
-function Division(brothers, sisters){
-    return brothers / sisters;
 }
